@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>texteditor</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+          <br>
+          Text Size=
+            <input type="text" name="Fontsize" value="20" maxlength="4" id="fontsize">
+            <button type="button" class="btn btn-primary btn-sm" onclick="changeSize()">ChangeSize</button>
+          <br>
+          Font Style
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-primary btn-sm" onclick="changeStlyeRegular()">Regular</button>
+              <button type="button" class="btn btn-primary btn-sm" onclick="changeStlyeItalic()"><i>Italic</i></button>
+              <button type="button" class="btn btn-primary btn-sm" onclick="changeStlyeBold()"><b>Bold</b></button>
+              <button type="button" class="btn btn-primary btn-sm" onclick="changeStlyeBoldItalic()"><i><b>Bold&Italic</b></i></button>
+            </div>
+          <br>
+          <input type="search" placeholder="search" onsearch="find()" id="sa" class="form-control">
+          Find
+            <input type="text" id="fr" value="" class="form-control">
+            And Replace with
+              <input type="text" value="" id="rr" class="form-control">
+            <button type="button" onclick="replace()" class="btn btn-primary btn-sm">GO</button>
+          <br>
+          <input type="file" name="my_file" class="btn btn-primary btn-sm"  id="my-file" onchange="openfile(event)">
+            <div class="btn-group" role="group">
+              <button type="submit" class="btn btn-primary btn-sm" value="save" onclick="saveTextAsFile()" id="save">SAVE</button>
+              <button type="button" class="btn btn-primary btn-sm" onclick="closefile()">CLOSE</button>
+            </div>
+          <br>
+          <br>
+          <textarea class="form-control" rows="5"  id="area"></textarea>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
